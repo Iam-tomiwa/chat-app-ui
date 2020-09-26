@@ -1,0 +1,132 @@
+.phone {
+  background-color: $bg-color;
+  //   z-index: 1;
+  position: relative;
+  width: 250px;
+  height: auto;
+  transform: scale(.8);
+  border-radius: 23px;
+  margin: 3rem 0;
+  padding-bottom: .05rem;
+
+  &::before {
+    content: "";
+    background-color: white;
+    border-radius: 25px;
+    display: block;
+    height: calc(100% + 23px);
+    width: calc(100% + 20px);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+    box-shadow: 7px 8px 67px 0px #d1d1d1;
+  }
+
+  .phone_camera {
+    width: 60%;
+    height: calc(100% / 27);
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    border-radius: 0 0 12px 12px;
+    transform: translateX(-50%);
+  }
+}
+
+.chat {
+  width: 60%;
+  padding: 0.5rem 0.4rem;
+  font-size: 0.6rem;
+  margin: 0.4rem;
+}
+
+.left-wrapper {
+  @include flex(column, space-around, flex-start);
+
+  .left {
+    float: left;
+    color: $chat-left-color;
+    background-color: $pale-voilet;
+    border-radius: 10px 10px 10px 3px;
+  }
+
+  .price{
+    width: 75%;
+    padding: .8rem 1.5rem .8rem .5rem;
+    @include gradient(left);
+    @include flex(row, space-between, center);
+    margin: .4rem;
+    border-radius: 10px 10px 10px 3px;
+    color: white;
+    
+    .radio-btn{
+      border: 2px solid $radio-btn;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+
+    p{
+      font-size: .6rem;
+    }
+
+    h3{
+      font-size: 1rem;
+      padding: 0 0 0 15%;
+    }
+  }
+}
+
+.right-wrapper {
+  @include flex(column, space-around, flex-end);
+
+  .right {
+    float: right;
+    color: $chat-right-color;
+    background-color: white;
+    border-radius: 10px 10px 3px 10px;
+  }
+
+  .pictures {
+    @include flex(row, space-between, center);
+    width: 60%;
+    background-color: transparent;
+    margin: 0.4rem;
+
+    img {
+      height: 45px;
+      width: 45px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.chat-input{
+  width: 93%;
+  margin: .6rem auto 1rem auto;
+  @include flex(row, space-between, center);
+  border-radius: 20px;
+  background-color: white;
+  height: 40px;
+
+  .placeholder{
+    color: $placeholder;
+    font-size: .7rem;
+    padding-left: 1.5rem;
+  }
+  
+  .send{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $submit;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    color: white;
+    margin-right: 3%;
+  }
+}

@@ -1,0 +1,39 @@
+nav{
+    @include gradient(right);
+    @include flex(row, space-between, flex-end);
+    padding: .7rem;
+    width: 100%;
+    height: 70px;
+    font-size: 16px;
+    border-radius: 25px 25px 7px 7px;
+    margin-bottom: .6rem;
+    
+    .fa{
+        font-size: 18px;
+        color: white;
+    }
+    
+    img{
+         height: 25px;
+         width: 25px;
+         border: 1px solid $pale-voilet;
+         border-radius: 50%;
+     }
+
+    .nav_texts{
+        width: 64%;
+
+        h3{
+            font-size: .9rem;
+            color: white;
+            font-weight: weight('regular');
+        }
+
+        p{
+            font-size: .5rem;
+            color: $pale-voilet;
+        }
+        
+    }
+
+}

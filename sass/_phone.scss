@@ -1,8 +1,8 @@
 .phone {
   background-color: $bg-color;
-  //   z-index: 1;
+    z-index: 1;
   position: relative;
-  width: 250px;
+  width: 90%;
   height: auto;
   transform: scale(.8);
   border-radius: 23px;
@@ -11,7 +11,7 @@
 
   &::before {
     content: "";
-    background-color: white;
+    background-color: #fffafa;
     border-radius: 25px;
     display: block;
     height: calc(100% + 23px);

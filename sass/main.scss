@@ -15,7 +15,7 @@ body{
         position: absolute;
         overflow: hidden;
         top: -3%;
-        left: -15%;
+        left: -30%;
         height: 80%;
         width: 65%;
         @include gradient(top);
@@ -46,7 +46,6 @@ body{
     p{
         font-size: .9rem;
         color: $p-color;
-
     }
 }
 

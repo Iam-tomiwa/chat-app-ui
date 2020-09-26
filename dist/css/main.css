@@ -16,7 +16,7 @@ body::before {
   position: absolute;
   overflow: hidden;
   top: -3%;
-  left: -15%;
+  left: -30%;
   height: 80%;
   width: 65%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e942ff), to(#8838ff));
@@ -46,9 +46,10 @@ body::before {
 }
 
 .phone {
-  background-color: #eeebf0;
+  background-color: #b3b3b3;
+  z-index: 1;
   position: relative;
-  width: 250px;
+  width: 90%;
   height: auto;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
@@ -59,7 +60,7 @@ body::before {
 
 .phone::before {
   content: "";
-  background-color: white;
+  background-color: #fffafa;
   border-radius: 25px;
   display: block;
   height: calc(100% + 23px);
@@ -363,6 +364,9 @@ nav .nav_texts p {
   .container .main-text {
     width: 50%;
     text-align: left;
+  }
+  .phone {
+    width: 250px;
   }
 }
 

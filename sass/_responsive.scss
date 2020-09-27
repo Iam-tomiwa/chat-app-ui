@@ -5,7 +5,7 @@
 }
 @include media-md{
     body{
-        overflow: hidden;
+        overflow-y: hidden;
         max-height: 100vh;
         height: 100vh;
     
@@ -53,14 +53,14 @@
 
 @include media-l{
     body{
-        overflow: hidden;
 
         &::before{
             content: '';
             top: -3%;
             left: -15%;
             height: 90%;
-            width: 450px;
+            // width: 450px;
+            width: 43vw;
             border-radius: 0 0 50% 50%;
             z-index: -2;
         }
@@ -68,7 +68,8 @@
         &::after{
             content: '';
             height: 80vh;
-            width: 450px;
+            // width: 450px;
+            width: 40vw;
             border-radius: 50% 50% 0 0;
         }
     }

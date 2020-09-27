@@ -20,12 +20,13 @@ nav{
     img{
          height: 30px;
          width: 30px;
-         border: 1px solid $pale-voilet;
+         border: 1.5px solid $pale-voilet;
          border-radius: 50%;
      }
 
     .nav_texts{
         width: 64%;
+        margin-left: 3px;
 
         h3{
             font-size: .9rem;

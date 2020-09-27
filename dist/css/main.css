@@ -292,12 +292,13 @@ nav .fa {
 nav img {
   height: 30px;
   width: 30px;
-  border: 1px solid #d89eff;
+  border: 1.5px solid #d89eff;
   border-radius: 50%;
 }
 
 nav .nav_texts {
   width: 64%;
+  margin-left: 3px;
 }
 
 nav .nav_texts h3 {
@@ -349,7 +350,7 @@ nav .nav_texts p {
 
 @media only screen and (min-width: 760px) {
   body {
-    overflow: hidden;
+    overflow-y: hidden;
     max-height: 100vh;
     height: 100vh;
   }
@@ -404,22 +405,19 @@ nav .nav_texts p {
 }
 
 @media only screen and (min-width: 1024px) {
-  body {
-    overflow: hidden;
-  }
   body::before {
     content: '';
     top: -3%;
     left: -15%;
     height: 90%;
-    width: 450px;
+    width: 43vw;
     border-radius: 0 0 50% 50%;
     z-index: -2;
   }
   body::after {
     content: '';
     height: 80vh;
-    width: 450px;
+    width: 40vw;
     border-radius: 50% 50% 0 0;
   }
   .phone {

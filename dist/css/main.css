@@ -7,21 +7,32 @@
 
 body {
   background-color: #f7f5f5;
-  overflow-X: hidden;
-  position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body::before {
   content: '';
-  position: absolute;
-  overflow: hidden;
+  position: fixed;
   top: -3%;
-  left: -30%;
-  height: 80%;
-  width: 65%;
+  left: -50%;
+  height: 50vh;
+  width: 90%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e942ff), to(#8838ff));
   background-image: linear-gradient(top, #e942ff, #8838ff);
-  border-radius: 0 0 45% 45%;
+  border-radius: 0 0 50% 50%;
+  z-index: -2;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  right: -50%;
+  height: 50vh;
+  width: 80%;
+  background-color: rgba(231, 194, 255, 0.37);
+  border-radius: 50% 50% 0 0;
   z-index: -2;
 }
 
@@ -48,11 +59,11 @@ body::before {
 
 .phone {
   position: relative;
-  width: 85%;
-  max-width: 320px;
+  width: 91%;
+  max-width: 400px;
   height: auto;
-  -webkit-transform: scale(0.76);
-          transform: scale(0.76);
+  -webkit-transform: scale(0.77);
+          transform: scale(0.77);
   border-radius: 35px;
   margin: 3rem 0;
   -webkit-box-shadow: 67px 71px 67px -50px #b8b7b7;
@@ -86,11 +97,11 @@ body::before {
 }
 
 .chat {
-  width: 65%;
+  width: auto;
+  max-width: 65%;
   padding: 0.5rem 0.4rem;
   font-size: 0.6rem;
   margin: 0.4rem 0;
-  font-weight: 600;
 }
 
 .left-wrapper {
@@ -110,7 +121,7 @@ body::before {
 
 .left-wrapper .left {
   color: #9241c8;
-  background-color: #d89eff;
+  background-color: rgba(231, 194, 255, 0.37);
   border-radius: 10px 10px 10px 3px;
 }
 
@@ -187,14 +198,14 @@ body::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 65%;
+  width: 67%;
   background-color: transparent;
   margin: 0.4rem 0;
 }
 
 .right-wrapper .pictures img {
-  height: 43px;
-  width: 43px;
+  height: 45x;
+  width: 45px;
   border-radius: 10px;
 }
 
@@ -273,6 +284,7 @@ nav {
 nav .fa {
   font-size: 18px;
   color: white;
+  padding: .4rem;
 }
 
 nav img {
@@ -311,6 +323,7 @@ nav .nav_texts p {
 .main-text p {
   font-size: .9rem;
   color: #a39daa;
+  line-height: 1.4;
 }
 
 .attribution {
@@ -326,6 +339,12 @@ nav .nav_texts p {
   color: #3e52a3;
 }
 
+@media only screen and (min-width: 500px) {
+  .phone {
+    max-width: 350px;
+  }
+}
+
 @media only screen and (min-width: 760px) {
   body {
     overflow: hidden;
@@ -337,10 +356,18 @@ nav .nav_texts p {
     content: '';
     top: -3%;
     left: -15%;
-    height: 56%;
+    height: 56vh;
     width: 400px;
     border-radius: 0 0 40% 40%;
     z-index: -2;
+  }
+  body::after {
+    content: '';
+    bottom: 0;
+    right: -20%;
+    height: 56vh;
+    width: 400px;
+    border-radius: 40% 40% 0 0;
   }
   body .attribution {
     position: fixed;
@@ -370,7 +397,7 @@ nav .nav_texts p {
     text-align: left;
   }
   .phone {
-    width: 280px;
+    max-width: 280px;
   }
 }
 
@@ -389,14 +416,9 @@ nav .nav_texts p {
   }
   body::after {
     content: '';
-    position: fixed;
-    bottom: 0;
-    right: -20%;
     height: 80vh;
     width: 450px;
-    background-color: rgba(231, 194, 255, 0.37);
     border-radius: 50% 50% 0 0;
-    z-index: -2;
   }
   .phone {
     margin: 3rem;

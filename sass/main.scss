@@ -7,19 +7,29 @@
 
 body{
     background-color: #f7f5f5;
-    overflow-X: hidden;
-    position: relative;
+    overflow-x: hidden;
+    max-width: 100vw;
 
     &::before{
         content: '';
-        position: absolute;
-        overflow: hidden;
+        position: fixed;
         top: -3%;
-        left: -30%;
-        height: 80%;
-        width: 65%;
+        left: -50%;
+        height: 50vh;
+        width: 90%;
         @include gradient(top);
-        border-radius: 0 0 45% 45%;
+        border-radius: 0 0 50% 50%;
+        z-index: -2;
+    }
+    &::after{
+        content: '';
+        position: fixed;
+        bottom: 0;
+        right: -50%;
+        height: 50vh;
+        width: 80%;
+        background-color: hsla(276, 100%, 88%, 0.37);
+        border-radius: 50% 50% 0 0;
         z-index: -2;
     }
 }
@@ -47,6 +57,7 @@ body{
     p{
         font-size: .9rem;
         color: $p-color;
+        line-height: 1.4;
     }
 }
 

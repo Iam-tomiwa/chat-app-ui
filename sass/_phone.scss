@@ -1,9 +1,9 @@
 .phone {
   position: relative;
-  width: 85%;
-  max-width: 320px;
+  width: 91%;
+  max-width: 400px;
   height: auto;
-  transform: scale(.76);
+  transform: scale(.77);
   border-radius: 35px;
   margin: 3rem 0;
   box-shadow: 67px 71px 67px -50px #b8b7b7;
@@ -35,11 +35,12 @@
 }
 
 .chat {
-  width: 65%;
+  width: auto;
+  max-width: 65%;
   padding: 0.5rem 0.4rem;
   font-size: 0.6rem;
   margin: 0.4rem 0;
-  font-weight: 600;
+  // font-weight: 600;
 }
 
 .left-wrapper {
@@ -47,7 +48,7 @@
 
   .left {
     color: $chat-left-color;
-    background-color: $pale-voilet;
+    background-color: hsla(276, 100%, 88%, 0.37);
     border-radius: 10px 10px 10px 3px;
   }
 
@@ -89,13 +90,13 @@
 
   .pictures {
     @include flex(row, space-between, center);
-    width: 65%;
+    width: 67%;
     background-color: transparent;
     margin: 0.4rem 0;
 
     img {
-      height: 43px;
-      width: 43px;
+      height: 45x;
+      width: 45px;
       border-radius: 10px;
     }
   }

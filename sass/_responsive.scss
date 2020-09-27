@@ -1,3 +1,8 @@
+@include media-sm{
+    .phone{
+        max-width: 350px;
+    }
+}
 @include media-md{
     body{
         overflow: hidden;
@@ -9,10 +14,19 @@
             content: '';
             top: -3%;
             left: -15%;
-            height: 56%;
+            height: 56vh;
             width: 400px;
             border-radius: 0 0 40% 40%;
             z-index: -2;
+        }
+
+        &::after{
+            content: '';
+            bottom: 0;
+            right: -20%;
+            height: 56vh;
+            width: 400px;
+            border-radius: 40% 40% 0 0;
         }
 
         .attribution{
@@ -33,7 +47,7 @@
         }
     }
     .phone{
-        width: 280px;
+        max-width: 280px;
     }
 }
 
@@ -53,14 +67,9 @@
 
         &::after{
             content: '';
-            position: fixed;
-            bottom: 0;
-            right: -20%;
             height: 80vh;
             width: 450px;
-            background-color: hsla(276, 100%, 88%, 0.37);
             border-radius: 50% 50% 0 0;
-            z-index: -2;
         }
     }
     .phone{

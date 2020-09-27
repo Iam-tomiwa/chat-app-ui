@@ -5,6 +5,7 @@
         height: 100vh;
     
         &::before{
+            position: fixed;
             content: '';
             top: -3%;
             left: -15%;
@@ -15,7 +16,7 @@
         }
 
         .attribution{
-            position: absolute;
+            position: fixed;
             margin: 0;
             bottom: 1rem;
             font-size: .7rem;
@@ -23,15 +24,16 @@
     }
     .container{
         @include flex(row, center, center);
-        max-width: 80vw;
+        width: 80vw;
+        height: 95vh;
 
         .main-text{
-            width: 50%;
+            width: 45%;
             text-align: left;
         }
     }
     .phone{
-        width: 250px;
+        width: 280px;
     }
 }
 
@@ -43,7 +45,7 @@
             content: '';
             top: -3%;
             left: -15%;
-            height: 80%;
+            height: 90%;
             width: 450px;
             border-radius: 0 0 50% 50%;
             z-index: -2;
@@ -51,10 +53,10 @@
 
         &::after{
             content: '';
-            position: absolute;
-            bottom: -3%;
+            position: fixed;
+            bottom: 0;
             right: -20%;
-            height: 70vh;
+            height: 80vh;
             width: 450px;
             background-color: hsla(276, 100%, 88%, 0.37);
             border-radius: 50% 50% 0 0;

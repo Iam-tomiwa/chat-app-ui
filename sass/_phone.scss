@@ -1,34 +1,32 @@
 .phone {
-  background-color: $bg-color;
-    z-index: 1;
   position: relative;
-  width: 90%;
+  width: 85%;
+  max-width: 320px;
   height: auto;
-  transform: scale(.8);
-  border-radius: 23px;
+  transform: scale(.76);
+  border-radius: 35px;
   margin: 3rem 0;
-  padding-bottom: .05rem;
+  box-shadow: 67px 71px 67px -50px #b8b7b7;
+  border: 24px solid #fcfcfc;
 
   &::before {
     content: "";
-    background-color: #fffafa;
-    border-radius: 25px;
-    display: block;
-    height: calc(100% + 23px);
-    width: calc(100% + 20px);
+    background-color: $bg-color;
+    border-radius: 30px;
+    height: calc(100% + 15px);
+    width: calc(100% + 24px);
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: -6.3px;
+    left: -12px;
     z-index: -1;
-    box-shadow: 7px 8px 67px 0px #d1d1d1;
   }
 
   .phone_camera {
     width: 60%;
     height: calc(100% / 27);
-    background-color: white;
+    background-color: #fcfcfc;
     position: absolute;
-    top: 0;
+    top: -9px;
     left: 50%;
     z-index: 1;
     border-radius: 0 0 12px 12px;
@@ -37,17 +35,17 @@
 }
 
 .chat {
-  width: 60%;
+  width: 65%;
   padding: 0.5rem 0.4rem;
   font-size: 0.6rem;
-  margin: 0.4rem;
+  margin: 0.4rem 0;
+  font-weight: 600;
 }
 
 .left-wrapper {
   @include flex(column, space-around, flex-start);
 
   .left {
-    float: left;
     color: $chat-left-color;
     background-color: $pale-voilet;
     border-radius: 10px 10px 10px 3px;
@@ -55,10 +53,10 @@
 
   .price{
     width: 75%;
-    padding: .8rem 1.5rem .8rem .5rem;
+    padding: .8rem .5rem;
     @include gradient(left);
-    @include flex(row, space-between, center);
-    margin: .4rem;
+    @include flex(row, space-around, center);
+    margin: .4rem 0;
     border-radius: 10px 10px 10px 3px;
     color: white;
     
@@ -84,7 +82,6 @@
   @include flex(column, space-around, flex-end);
 
   .right {
-    float: right;
     color: $chat-right-color;
     background-color: white;
     border-radius: 10px 10px 3px 10px;
@@ -92,13 +89,13 @@
 
   .pictures {
     @include flex(row, space-between, center);
-    width: 60%;
+    width: 65%;
     background-color: transparent;
-    margin: 0.4rem;
+    margin: 0.4rem 0;
 
     img {
-      height: 45px;
-      width: 45px;
+      height: 43px;
+      width: 43px;
       border-radius: 10px;
     }
   }
@@ -106,7 +103,7 @@
 
 .chat-input{
   width: 93%;
-  margin: .6rem auto 1rem auto;
+  margin: .6rem auto;
   @include flex(row, space-between, center);
   border-radius: 20px;
   background-color: white;
